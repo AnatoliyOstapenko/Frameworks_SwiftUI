@@ -32,7 +32,11 @@ struct FrameworksGridView: View {
                 .padding(.top, 30)
                 .sheet(isPresented: $frameworksGridViewModel.isShowingFrameworkDetailView) {
                     /// what modal view will appear:
-                    FrameworkDetailView(framework: frameworksGridViewModel.selectedFarmework ?? MockData.frameworksModel[2])
+                    if let selectedFramework = frameworksGridViewModel.selectedFarmework {
+                        FrameworkDetailView(framework: selectedFramework,
+                                            isShowingFrameworkDetailView: $frameworksGridViewModel.isShowingFrameworkDetailView)
+                    }
+                    
                 }
             }
         }

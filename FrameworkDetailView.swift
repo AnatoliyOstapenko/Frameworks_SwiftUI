@@ -9,14 +9,17 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     
+//    @Environment(\.dismiss) var dismiss
     var framework: FrameworksModel
+    @Binding var isShowingFrameworkDetailView: Bool
     
     var body: some View {
         VStack {
             HStack {
                 Spacer()
                 Button {
-                    
+                    isShowingFrameworkDetailView = false
+//                    dismiss()
                 } label: {
                     Image(systemName: "xmark")
                         .frame(width: 50, height: 50)
@@ -50,7 +53,7 @@ struct FrameworkDetailView: View {
 
 struct FrameworkDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkDetailView(framework: MockData.frameworksModel[2])
+        FrameworkDetailView(framework: MockData.frameworksModel[2], isShowingFrameworkDetailView: .constant(false)) /// it's hardcode for preview only
             .preferredColorScheme(.dark)
     }
 }
