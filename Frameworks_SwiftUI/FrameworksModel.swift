@@ -8,7 +8,7 @@
 import Foundation
 
 struct FrameworksModel: Identifiable {
-    let id = UUID() /// add Identifiable to for loop Model by uique id (instead of  \.self)
+    let id = UUID() /// add Identifiable for loop Model by uique id (instead of  \.self)
     
     let name: String
     let imageName: String

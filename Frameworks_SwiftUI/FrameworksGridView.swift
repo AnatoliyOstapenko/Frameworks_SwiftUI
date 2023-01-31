@@ -30,6 +30,8 @@ struct FrameworksGridView: View {
                 }
                 .navigationTitle("🍎 Frameworks")
                 .padding(.top, 30)
+                /// transfer bool value (true or false) from view model to sheet
+                ///  this sheet invoke every time when isShowingFrameworkDetailView changes
                 .sheet(isPresented: $frameworksGridViewModel.isShowingFrameworkDetailView) {
                     /// what modal view will appear:
                     if let selectedFramework = frameworksGridViewModel.selectedFarmework {

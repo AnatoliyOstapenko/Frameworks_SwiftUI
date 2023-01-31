@@ -15,6 +15,6 @@ final class FrameworksGridViewModel: ObservableObject {
         }
     }
     
-    
+    /// it's like KVO, informs immediately other objects who signed $
     @Published var isShowingFrameworkDetailView = false
 }

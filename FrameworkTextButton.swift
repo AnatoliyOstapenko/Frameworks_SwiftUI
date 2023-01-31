@@ -1,5 +1,5 @@
 //
-//  FrameworkTextButton.swift
+//  FrameworkButtonLabel.swift
 //  Frameworks_SwiftUI
 //
 //  Created by AnatoliiOstapenko on 30.01.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FrameworkTextButton: View {
+struct FrameworkButtonLabel: View {
     
     var title: String
     
@@ -24,6 +24,6 @@ struct FrameworkTextButton: View {
 
 struct FrameworkTextButton_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkTextButton(title: "Mock title")
+        FrameworkButtonLabel(title: "Mock title")
     }
 }
