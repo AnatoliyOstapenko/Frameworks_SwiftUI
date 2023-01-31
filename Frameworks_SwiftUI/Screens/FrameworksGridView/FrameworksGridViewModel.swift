@@ -10,11 +10,15 @@ import SwiftUI
 final class FrameworksGridViewModel: ObservableObject {
     
     var selectedFarmework: FrameworksModel? {
-        didSet {
-            isShowingFrameworkDetailView = true /// when selectedFarmework asigned by new FrameworksModel
-        }
+        /// when selectedFarmework asigned by new FrameworksModel
+        didSet { isShowingFrameworkDetailView = true }
     }
-    
     /// it's like KVO, informs immediately other objects who signed $
     @Published var isShowingFrameworkDetailView = false
+    
+    let columns: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
 }

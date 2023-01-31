@@ -9,35 +9,18 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     
-//    @Environment(\.dismiss) var dismiss
     var framework: FrameworksModel
     @Binding var isShowingFrameworkDetailView: Bool
     @State private var isShowingSafariView: Bool = false
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button {
-                    isShowingFrameworkDetailView = false
-//                    dismiss()
-                } label: {
-                    Image(systemName: "xmark")
-                        .frame(width: 50, height: 50)
-                        .imageScale(.large)
-                        .foregroundColor(Color(.label))   
-                }
-            }
-            .padding(.trailing)
+            XDismissButton(isShowingFrameworkDetailView: $isShowingFrameworkDetailView)
             
             FrameworksTitleView(frameworks: framework)
-                .padding()
+                
+            FrameDescriptionView(framework: framework)
             
-            Text(framework.description)
-                .multilineTextAlignment(.center) /// text alignment
-                .minimumScaleFactor(0.6)
-                .padding()
-                .font(.body)
             
             Spacer()
             
