@@ -27,8 +27,13 @@ struct FrameworkDetailView: View {
             Button {
                 isShowingSafariView.toggle() /// return true
             } label: {
-                FrameworkButtonLabel(title: "Learn more")
+//                FrameworkButtonLabel(title: "Learn more") /// left old version here
+                Label("Learn more", systemImage: "book")
             }
+            .buttonStyle(.bordered)
+            .tint(Color(.label))
+            .controlSize(.large)
+            .buttonBorderShape(.capsule)
             .fullScreenCover(isPresented: $isShowingSafariView) {
                 if let url = URL(string: framework.urlString) {
                     SafariView(url: url)
@@ -49,6 +54,6 @@ struct FrameworkDetailView: View {
 struct FrameworkDetailView_Previews: PreviewProvider {
     static var previews: some View {
         FrameworkDetailView(framework: MockData.frameworksModel[2], isShowingFrameworkDetailView: .constant(false)) /// it's hardcode for preview only
-            .preferredColorScheme(.dark)
+//            .preferredColorScheme(.dark)
     }
 }

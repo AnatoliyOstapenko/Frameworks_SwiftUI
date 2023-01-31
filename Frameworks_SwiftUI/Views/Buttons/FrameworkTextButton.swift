@@ -14,6 +14,7 @@ struct FrameworkButtonLabel: View {
     var body: some View {
         Text(title)
             .frame(width: 280, height: 50) /// always first
+            .buttonStyle(.bordered)
             .font(.title2)
             .fontWeight(.bold)
             .background(.red)
