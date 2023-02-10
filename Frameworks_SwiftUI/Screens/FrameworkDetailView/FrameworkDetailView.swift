@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     
-    var framework: FrameworksModel
+    let framework: FrameworksModel
     @Binding var isShowingFrameworkDetailView: Bool
     @State private var isShowingSafariView: Bool = false
     

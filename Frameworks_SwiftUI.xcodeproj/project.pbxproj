@@ -71,8 +71,7 @@
 				BCB6CB6829897EE100CFCE22 /* Views */,
 				BCB6CB6429897D7C00CFCE22 /* Model */,
 				BCB6CB6929897F0E00CFCE22 /* UIKit Components */,
-				BC00BD5D298596E000A862A4 /* Frameworks_SwiftUIApp.swift */,
-				BC00BD61298596E100A862A4 /* Assets.xcassets */,
+				BC990F9B298EA9DB00D3A888 /* App */,
 				BC00BD63298596E100A862A4 /* Preview Content */,
 			);
 			path = Frameworks_SwiftUI;
@@ -84,6 +83,15 @@
 				BC00BD64298596E100A862A4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BC990F9B298EA9DB00D3A888 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BC00BD61298596E100A862A4 /* Assets.xcassets */,
+				BC00BD5D298596E000A862A4 /* Frameworks_SwiftUIApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		BCB6CB6229897D0A00CFCE22 /* FrameworksGridView */ = {
